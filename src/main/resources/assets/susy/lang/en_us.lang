@@ -11,6 +11,11 @@ tile.coagulation_tank_wall.wooden_coagulation_tank_wall.name=Wooden Coagulation 
 
 tile.alternator_coil.copper.name=Copper Alternator Coil
 tile.turbine_rotor.steel.name=Steel Turbine Block
+
+tile.home_block.home_block_home.name="Home Block (Default)"
+tile.home.allowed=Spawn set
+tile.home.denied=Cannot set spawn
+
 # Rocks
 tile.susy_stone_smooth.gabbro.name=Gabbro
 tile.susy_stone_smooth.gneiss.name=Gneiss
