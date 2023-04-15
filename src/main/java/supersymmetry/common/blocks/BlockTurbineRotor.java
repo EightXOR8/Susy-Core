@@ -38,8 +38,7 @@ public class BlockTurbineRotor extends VariantBlock<BlockTurbineRotor.BlockTurbi
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
     }
 
-    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-    {
+    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
         return super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer).withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
 
@@ -47,13 +46,11 @@ public class BlockTurbineRotor extends VariantBlock<BlockTurbineRotor.BlockTurbi
         return state.withProperty(FACING, rot.rotate((EnumFacing) state.getValue(FACING)));
     }
 
-    public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
-    {
+    public IBlockState withMirror(IBlockState state, Mirror mirrorIn) {
         return state.withRotation(mirrorIn.toRotation((EnumFacing)state.getValue(FACING)));
     }
 
-    public IBlockState getStateFromMeta(int meta)
-    {
+    public IBlockState getStateFromMeta(int meta) {
         int i = meta / 4;
         int j = meta % 4 + 2;
 
@@ -67,8 +64,7 @@ public class BlockTurbineRotor extends VariantBlock<BlockTurbineRotor.BlockTurbi
         return this.getDefaultState().withProperty(FACING, enumfacing).withProperty(this.VARIANT, this.VALUES[i % this.VALUES.length]);
     }
 
-    public int getMetaFromState(IBlockState state)
-    {
+    public int getMetaFromState(IBlockState state) {
         int i = ((Enum)state.getValue(this.VARIANT)).ordinal();
         int j = ((EnumFacing)state.getValue(FACING)).getIndex();
         return j - 2 + i * 4;

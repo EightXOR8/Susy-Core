@@ -1,7 +1,6 @@
 package supersymmetry.loaders.recipes;
 
 import gregtech.api.recipes.ModHandler;
-import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.blocks.StoneVariantBlock;
